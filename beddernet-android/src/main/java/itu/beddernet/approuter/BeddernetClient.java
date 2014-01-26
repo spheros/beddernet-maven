@@ -1,8 +1,5 @@
 package itu.beddernet.approuter;
 
-import itu.beddernet.approuter.IBeddernetServiceCallback;
-
-
 
 /**
  * Encaplulates a client application that connects to the service, it contains 

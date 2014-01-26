@@ -8,8 +8,6 @@ import itu.beddernet.router.dsdv.info.ConfigInfo;
 import itu.beddernet.router.message.multi.MultiAppMessage;
 import itu.beddernet.router.message.uni.UniAppMessage;
 import itu.beddernet.router.message.uni.UniAppMessageUAIH;
-import itu.beddernet.approuter.IBeddernetService;
-import itu.beddernet.approuter.IBeddernetServiceCallback;
 
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -423,18 +421,17 @@ public class BeddernetService extends Service {
 			router.startApplication();
 			// Add UIAHs already bound
 			Set<Long> clients = clientTable.keySet();
-			Log.d(TAG, "The service has" + clientTable.size()
-					+ " bound applications");
+			Log.d(TAG, "The service has" + clientTable.size() + " bound applications");
 			Iterator<Long> i = clients.iterator();
-			while (i.hasNext()) {
+
+            while (i.hasNext()) {
 				router.addUAIH(i.next());
 			}
 
 			Log.d(TAG, "BEDnet Service started");
 			random = new Random();
 		} else {
-			Toast.makeText(this, "The service could not be started",
-					Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "The service could not be started", Toast.LENGTH_LONG).show();
 			Log.d(TAG, "The service could not be started");
 			stopSelf();
 		}

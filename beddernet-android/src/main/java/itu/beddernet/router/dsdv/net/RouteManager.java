@@ -22,8 +22,6 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.Vector;
 import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import android.os.Handler;
 import android.util.Log;
@@ -326,8 +324,7 @@ public class RouteManager {
 					toNetworkAddresses[x] = a.get(x);
 				}
 				// Create the message
-				appMsg = new MultiAppMessage(fromNetworkAddress,
-						toNetworkAddresses, serviceHash, payload);
+				appMsg = new MultiAppMessage(fromNetworkAddress, toNetworkAddresses, serviceHash, payload);
 
 				// send to next hop or DEST
 				pktHandlerOut.put(nexthop, appMsg);

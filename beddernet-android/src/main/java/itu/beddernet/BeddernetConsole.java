@@ -1,6 +1,5 @@
 package itu.beddernet;
 
-import itu.beddernet.approuter.BeddernetService;
 import itu.beddernet.approuter.IBeddernetService;
 import itu.beddernet.approuter.IBeddernetServiceCallback;
 import itu.beddernet.common.NetworkAddress;

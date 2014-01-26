@@ -3,7 +3,6 @@ package itu.beddernet.approuter;
 import itu.beddernet.common.NetworkAddress;
 import itu.beddernet.router.message.uni.UniAppMessage;
 import itu.beddernet.router.message.uni.UniAppMessageUAIH;
-import itu.beddernet.approuter.IBeddernetServiceCallback;
 
 import android.os.Handler;
 import android.os.Message;
